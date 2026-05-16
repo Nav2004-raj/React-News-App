@@ -1,4 +1,4 @@
-📰 NewsMag
+# 📰 NewsMag
 A sleek, responsive news aggregator built with React and Vite that fetches the latest headlines from around the world in real time.
 
 🚀 Features:
@@ -17,7 +17,7 @@ Installation:
 
 1. Clone the repository
 
-git clone https://github.com/your-username/newsmag.git
+git clone git@github.com:Nav2004-raj/React-News-App.git
 cd newsmag
 
 2. Install dependencies
