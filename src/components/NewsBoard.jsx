@@ -4,12 +4,15 @@ import NewsItem from "./NewsItem";
 const NewsBoard = ({ category }) => {
   const [articles, setArticles] = useState([]);
 
+  const apiKey = import.meta.env.VITE_API_KEY;
+
   useEffect(() => {
-    let url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${import.meta.env.VITE_API_KEY}`;
+    let url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${apiKey}`;
     fetch(url)
       .then((response) => response.json())
-      .then((data) => setArticles(data.articles));
-  }, [category]);
+      .then((data) => setArticles(data.articles))
+      .catch((err) => console.error("API Error:", err));
+  }, [category, apiKey]);
 
   return (
     <div className="container text-center">
